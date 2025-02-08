@@ -40,7 +40,6 @@ export default function MenuForm(
   const add = async (values) => {
     setLoading(true);
     resetError();
-    console.log(values, 'input valuesssssss')
     try {
       await axios.post(`/${menuName}/register`, values, {
         headers: { access_token: getToken() }
@@ -56,7 +55,6 @@ export default function MenuForm(
   }
 
   const edit = async (values) => {
-    console.log(values, 'input valuesssssss')
     resetError();
     if (getIsShallowEqual(values, stateValues)) {
       swalAlert('No change!', 'The values in this form are still the same.', 'info');
@@ -80,7 +78,6 @@ export default function MenuForm(
   }
 
   const rearrange = (values) => {
-    console.log(values, 'input valuesssssss')
     const dragKey = structureData[0].property;
     const value = Number(values[dragKey]);
     if (!value || !Number.isInteger(value) || value <= 0) {
@@ -105,7 +102,6 @@ export default function MenuForm(
           }
           return obj;
         }, {});
-        console.log(initialValues, "<<<<<<<<<<")
         setStateValues(currentStateValues => {
           return Object.assign({}, currentStateValues, initialValues);
         });
@@ -115,7 +111,6 @@ export default function MenuForm(
         setStateValues(currentStateValues => {
           return Object.assign({}, currentStateValues, formatEditFormValue(dataByPk));
         });
-        console.log('no loading');
       } else {
         setLoading(true);
         axios

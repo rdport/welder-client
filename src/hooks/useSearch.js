@@ -44,9 +44,7 @@ function useSearch(menuName) {
       if (previousPath !== path) {
         params.page = 1;
         params.limit = 20;
-        console.log('1111111111');
       } else {
-        console.log('222222')
         params.page = page;
         params.limit = limit;
         if (term.trim().length) params.term = term;
@@ -85,15 +83,12 @@ function useSearch(menuName) {
     //     })
     //   }
     // }
-    console.log(params, 'useSearch');
-    console.log(isRearrangeMode, 'Rearrange Mode');
     axios
       .post(`/${menuName}`, {}, {
         headers: { access_token: getToken() },
         params
       })
       .then(res => {
-        console.log(res, ',,,,inside Then');
         if (!isRearrangeMode) {
           setData(prevData => {
             return [...prevData, ...res.data.results];
@@ -120,24 +115,19 @@ function useSearch(menuName) {
     if (getToken() && isAuthenticatedRedux && (isPressed || isDatabaseChanged)) {
       setData([]);
       dispatch(setPage(1));
-      console.log('111-1')
-      console.log(previousPage, page)
       if (
         (isDatabaseChanged && previousPage === page && term === '' && order === '' && isDateEmpty)
         || (isPressed && previousPage === page && page && term === '' && order === '' && isDateEmpty)
       ) {
         search();
-        console.log('111-2')
       }
     }
   }, [isPressed, isDatabaseChanged]);
 
   useEffect(() => {
-    console.log(previousPage, page)
     if (previousPage > page || previousPage < page) {
       if (previousPage > page) setData([]);
       search();
-      console.log('222')
     }
   },[page]);
 
@@ -145,11 +135,6 @@ function useSearch(menuName) {
     if (getToken() && isAuthenticatedRedux) {
       setData([]);
       dispatch(setPage(1));
-      console.log('333-1')
-      console.log(previousTerm, term)
-      console.log(previousOrder, order)
-      console.log(previousPage, page)
-      console.log(previousPath, path)
       if (
         (
           previousPath !== path
@@ -164,7 +149,6 @@ function useSearch(menuName) {
       || (isAuthenticatedRedux && previousPath === path)   
       ) {
         search();
-        console.log('333-2')
       }
     }
   }, [term, order, path, isAuthenticatedRedux]);

@@ -26,9 +26,7 @@ export default function useFetchOptions(
           params
         })
         .then(res => {
-          console.log(res, 'masukkkkkk')
           setData(res.data);
-          console.log(res.data, '<<<<<<<<< useFetchOptions');
         })
         .catch(err => {
           console.log(err)

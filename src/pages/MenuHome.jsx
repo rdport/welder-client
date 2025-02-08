@@ -110,7 +110,6 @@ export default function MenuHome({ menuName, restricted }) {
 
   const handleOnDragEnd = async (result) => {
     try {
-      console.log(result);
       if (!result.destination || result.destination.index === result.source.index) return;
       const{ dragKeyValue: id } = getDragInit();
       const patchObj = {

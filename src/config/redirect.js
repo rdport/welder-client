@@ -1,3 +1,3 @@
-const loginPage = 'http://localhost:3000/login';
+const loginPage = 'https://welder-client-rdport.onrender.com/login';
 
 export { loginPage };

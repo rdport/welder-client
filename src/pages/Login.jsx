@@ -66,7 +66,6 @@ export default function Login() {
       swalAlert('Logged In!', 'Welcome!', 'success');
     } catch (err) {
       resetError();
-      console.log('login error');
       errorHandler(setFieldServerError, setNonFieldServerError, err);
     } 
   }

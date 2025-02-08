@@ -72,7 +72,6 @@ export const setIsPressed = (isPressed) => {
 
 export const setNoSearchBar = (noSearchBar) => {
   return (dispatch) => {
-    console.log(noSearchBar)
     dispatch({
       type: "search/setNoSearchBar",
       noSearchBar

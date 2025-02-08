@@ -11,7 +11,6 @@ export default function DeleteDialog({ menuName, show, handleCloseForm, handleCl
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
-    console.log('delete')
     axios.delete(`/${menuName}/${id}`, {
       headers: { access_token: getToken() }
     })

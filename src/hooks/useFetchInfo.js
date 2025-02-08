@@ -10,7 +10,6 @@ export default function useFetchInfo(menuName, id, dataByPk, setDataByPk) {
 
   useEffect(() => {
     if (dataByPk?.id === id) {
-      console.log('no loading')
       setData(dataByPk);
     } else {
       setLoading(true);
@@ -20,10 +19,8 @@ export default function useFetchInfo(menuName, id, dataByPk, setDataByPk) {
           headers: { access_token: getToken() }
         })
         .then(res => {
-          console.log(res, 'masukkkkkk')
           setData(res.data);
           setDataByPk(res.data);
-          console.log(res.data, '<<<<<<<<< useFetchDetails');
         })
         .catch(err => {
           console.log(err)

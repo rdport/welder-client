@@ -40,7 +40,6 @@ export function getLink(menuName, id) {
 
 export function getMenuData(menuName, property) {
   const foundMenu = menus.find(menu => menu.name === menuName);
-  console.log(menuName);
   return foundMenu[property];
 }
 

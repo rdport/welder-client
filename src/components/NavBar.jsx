@@ -30,15 +30,12 @@ export default function NavBar() {
       handleClose();
       history.push('/login');
       swalAlert('See you soon!', data.message, 'success');
-      console.log(data.message);
     } catch (err) {
       let message;
       if (err.response) {
         message = err.response.data.message;
-        console.log(err.response.data.message);
       } else {
         message = err.message;
-        console.log(err.message);
       }
       swalAlert('Sign out failed', message, 'error');
     }

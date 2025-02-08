@@ -22,7 +22,6 @@ function useAuthentication() {
       .catch(err => {
         const error = err.response ? err.response.data.message : err.message;
         dispatch(setAuthError(error));
-        console.log(error, 'useAuth');
         if (path !== '/login') history.push('/login');
       })
       .finally (_ => dispatch(setAuthLoading(false)));
