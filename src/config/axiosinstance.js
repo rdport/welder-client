@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getToken, getUtilPath } from '../utils/auth';
 import { loginPage } from './redirect';
 import { auth } from '../utils/auth';
-const baseURL = 'http://localhost:5000';
+const baseURL = 'https://welder-server-rdport.onrender.com';
 
 const instance = axios.create({
   // baseURL: 'https://e-commerce-cms-rud.herokuapp.com'

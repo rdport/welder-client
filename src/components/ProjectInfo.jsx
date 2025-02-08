@@ -83,9 +83,9 @@ export default function ProjectInfo({ showForm, handleCloseForm }
                   </ul>
                   <h2>Features</h2>
                     <ul>
-                      <li>Secure authentication using acces token stored in memory and refresh token stored in HTTPOnly cookie</li>
+                      <li>Secure authentication using acces token stored in memory, with 1-hour validity, and refresh token stored in HTTPOnly cookie, with 1-day validity.</li>
                       <li>Users with standard class cannot access restricted contents, while those with master class have no limit.<br></br>
-                    For testing, use the following data which have been added to the database<br></br>
+                    For testing, use the following data which have been added to the database:<br></br>
                           <br></br>
                           <p className="mb-0" style={{fontWeight: 'bold'}}>Steven Rich</p>
                           email: stevenrich@mail.com<br></br>
