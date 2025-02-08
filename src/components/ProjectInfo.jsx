@@ -16,6 +16,9 @@ export default function ProjectInfo({ showForm, handleCloseForm }
       >
             <div className="info-modal-header modal-header">
               <h5 className="modal-title" style={{fontWeight:'bold'}} id="exampleModalLongTitle">Welcome to Welder!</h5>
+              <button type="button" onClick={handleCloseForm} className="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
             <div className="info-modal-text-container">
                 <h1 className="text-center mb-3">Tech Stack</h1>
