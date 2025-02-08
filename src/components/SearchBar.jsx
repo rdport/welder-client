@@ -160,7 +160,9 @@ export default function SearchBar() {
   }, [path]);
 
   useEffect(() => {
-    if (isDatabaseChanged) initialize();
+    if (isDatabaseChanged && !isRearrangeMode) {
+      initialize();
+    }
   }, [isDatabaseChanged]);
 
   useEffect(() => {

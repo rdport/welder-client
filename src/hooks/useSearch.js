@@ -118,6 +118,7 @@ function useSearch(menuName) {
       if (
         (isDatabaseChanged && previousPage === page && term === '' && order === '' && isDateEmpty)
         || (isPressed && previousPage === page && page && term === '' && order === '' && isDateEmpty)
+        || (isRearrangeMode)
       ) {
         search();
       }
