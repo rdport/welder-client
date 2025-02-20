@@ -32,6 +32,10 @@ export default function MenuForm(
     setOnFocus(onFocusObj);
   }
 
+  function handleFormSubmit(event) {
+      event.preventDefault();
+  };
+
   function resetError() {
     setFieldServerError(null);
     setNonFieldServerError(null);
@@ -183,7 +187,7 @@ export default function MenuForm(
           >
             <Container fluid className="add-edit-form-container">
               <Error error={nonFieldServerError} />
-              <Form noValidate>
+              <Form onSubmit={handleFormSubmit} noValidate>
                 {/* Enable side effect to delete server error and display only client error 
                 when any field input changes */}
                 <FormikEffect onChange={resetError} />
