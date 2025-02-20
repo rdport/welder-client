@@ -101,7 +101,7 @@ export default function MenuHome({ menuName, restricted }) {
   const handleScroll = () => {
     const rootElement = document.documentElement;
     const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-    if (rootElement.scrollTop / scrollTotal === 1) {
+    if (rootElement.scrollTop / scrollTotal > 0.99) {
       dispatch(setPage(page + 1));
       setIsInfiniteLoading(true);
       document.removeEventListener('scroll', handleScroll);
