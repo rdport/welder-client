@@ -146,7 +146,7 @@ export default function ProjectInfo({ showForm, handleCloseForm }
                     <ul>
                       <li>This project is still in development, there are only two accessible sections, Customers and Material Purchases.</li>
                       <li>The backend of this project has been completed and can be tested using REST Client from VS Code by using a file named "request.rest" provided in <a href="https://github.com/rdport/welder-server">welder-server</a> on github.</li>
-                      <li>This project is using free-tier hosting so this website might not always be accessible and a significant initial loading time is expected.</li>
+                      <li>This project uses free-tier hosting so this website might not always be accessible and a significant initial loading time is expected.</li>
                     </ul>
                 </div>
             </div>
