@@ -65,6 +65,38 @@ export default function ProjectInfo({ showForm, handleCloseForm }
                   </div>
                   <div className="col-4">
                     <div class="tech-icon-container">
+                      <img className="info-card-img" src="/images/Express.svg" alt="Express"/>
+                      <div className="info-card-body card-body">
+                        <h5 className="info-card-title card-title text-center">Express</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-4">
+                    <div class="tech-icon-container">
+                      <img className="info-card-img" src="/images/Sequelize.svg" alt="Sequelize"/>
+                      <div className="info-card-body card-body">
+                        <h5 className="info-card-title card-title text-center">Sequelize</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-4">
+                    <div class="tech-icon-container">
+                      <img className="info-card-img" src="/images/Node.js.svg" alt="Node.js"/>
+                      <div className="info-card-body card-body">
+                        <h5 className="info-card-title card-title text-center">Node.js</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-4">
+                    <div class="tech-icon-container">
+                      <img className="info-card-img" src="/images/PostgresSQL.svg" alt="PostgresSQL"/>
+                      <div className="info-card-body card-body">
+                        <h5 className="info-card-title card-title text-center">PostgresSQL</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-4">
+                    <div class="tech-icon-container">
                       <img className="info-card-img" src="/images/JavaScript.svg" alt="JavaScript"/>
                       <div className="info-card-body card-body">
                         <h5 className="info-card-title card-title text-center">JavaScript</h5>
