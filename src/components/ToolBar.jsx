@@ -72,9 +72,9 @@ export default function ToolBar() {
   
   return (
     <>
-      {((path !== '/login') && isAuthenticatedRedux && !isForbidden
+      {((path !== '/login') && (path !== '/') && isAuthenticatedRedux && !isForbidden
         && !isNotFound) && (
-        <div className="toolbar-container mt-1">
+        <div className="toolbar-container">
           <div className="toolbar-container-left">
             {(getIsInMenus(path) && !isRearrangeMode) && 
               <OverlayTrigger
